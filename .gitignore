@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# Dependencias de Node.js
+/node_modules
+
+# Dependencias de PHP (Composer)
+/vendor
+
+# Archivos de caché, logs, etc., que tampoco deberían subirse
+includes/.env
+/storage/*.log
+/public/build
