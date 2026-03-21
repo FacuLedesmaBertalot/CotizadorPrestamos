@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from "./components/Header"
+import Button from "./components/Button"
 
 function App() {
   const [cantidad, setCantidad] = useState(10000);
@@ -42,17 +43,15 @@ function App() {
       <Header />
 
       <div className='flex justify-between my-6'>
-        <button
-          type='button'
-          className='h-10 w-10 flex items-center justify-center font-bold text-white text-2xl bg-lime-500 rounded-full hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-lime-500'
-          onClick={handleClickDecremento}
-        >-</button>
+        <Button 
+          operador='-'
+          fn={handleClickDecremento}  
+        />
+        <Button 
+          operador='+'  
+          fn={handleClickIncremento}  
+        />
 
-        <button
-          type='button'
-          className='h-10 w-10 flex items-center justify-center font-bold text-white text-2xl bg-lime-500 rounded-full hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-lime-500'
-          onClick={handleClickIncremento}
-        >+</button>
       </div>
 
       <input 
